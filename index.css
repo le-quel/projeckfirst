@@ -1,0 +1,125 @@
+#container{
+    width:1200px;
+    margin: 0% auto;
+    background-color: white;
+}
+.menu{
+    height: 50px;
+    padding-top: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+}
+.right{
+    float: right;
+}
+.logo{
+    position: fixed;
+    width: 100%;
+    top: 70px;
+    z-index: 10;
+    background-color: white;
+    height: 70px;
+}
+.logo a{
+    text-align: right;
+    margin: 8px;
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+}
+.logo a:hover{
+    background-color: aqua;
+}
+.login{
+    border:40px;
+    padding: 12px;
+    border-radius: 30px;
+    background-color: antiquewhite;
+}
+h1{
+    text-align: center;
+    padding: 70px;
+    border-style:3px 20px solid red ;
+}
+.menugd img{
+    border-radius: 20px;
+}
+.menugd{
+    background-color: white;
+    display: block;
+    justify-content: space-between;
+    width: 20%;
+    float: left;
+    margin: 25px;
+    text-align: center;
+   
+}
+.menugd:hover{
+    transform: scale(1.09);
+}
+.danhmucgame{
+    display: block;
+    justify-content: space-between;
+    width: 26%;
+    float: left;
+    margin: 34px;
+    height: 400px;
+    text-align: center;
+    border:1px solid black ;
+   
+}
+button{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 20px;
+    border: 1px solid blue;
+}
+button:hover{
+    background-color: red;
+}
+.danhmucgame:hover{
+    transform: scale(1.05);
+}
+.boclucky{
+    margin-left:200px ;
+}
+.luckytest{
+    display: block;
+    justify-content: space-between;
+    width: 25%;
+    float: left;
+    margin: 20px;
+    
+    height: 300px;
+    border: 1px solid black;
+    text-align: center;
+}
+.luckytest:hover{
+    transform: scale(1.05);
+}
+footer{
+    clear: both;
+    background-color: black;
+    height: 300px;
+    width: 100%;
+}
+.foot1{
+    display: block;
+    justify-content: space-between;
+    width: 30%;
+    height: 200px;
+    margin: 40px;
+    float: left;
+    color: white;
+}
+.foot1 a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+.foot1 a:hover{
+    text-decoration: underline;
+    color: aqua;
+}

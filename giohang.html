@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Giỏ hàng</title>
+  <style>
+    /* CSS để tạo giao diện đơn giản cho giỏ hàng */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .product {
+      margin-bottom: 10px;
+    }
+
+    .product input[type="text"],
+    .product input[type="number"] {
+      width: 50px;
+    }
+
+    #cart {
+      margin-top: 20px;
+    }
+
+    #cart ul {
+      padding: 0;
+      list-style-type: none;
+    }
+
+    #cart li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Giỏ hàng</h1>
+
+    <div class="product">
+      <span>Tên sản phẩm:</span>
+      <input type="text" id="productName">
+      <span>Số lượng:</span>
+      <input type="number" id="productQuantity">
+      <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+    </div>
+
+    <div id="cart">
+      <h2>Giỏ hàng của bạn</h2>
+      <ul id="cartItems"></ul>
+    </div>
+  </div>
+
+  <script>
+    // Khởi tạo giỏ hàng rỗng
+    let cart = [];
+
+    // Hàm thêm sản phẩm vào giỏ hàng
+    function addToCart() {
+      // Lấy thông tin sản phẩm từ người dùng
+      let productName = document.getElementById("productName").value;
+      let productQuantity = document.getElementById("productQuantity").value;
+
+      // Tạo một đối tượng sản phẩm mới
+      let product = {
+        name: productName,
+        quantity: productQuantity
+      };
+
+      // Thêm sản phẩm vào giỏ hàng
+      cart.push(product);
+
+      // Cập nhật giao diện danh sách giỏ hàng
+      updateCart();
+    }
+
+    // Hàm cập nhật giao diện danh sách giỏ hàng
+    function updateCart() {
+      let cartItems = document.getElementById("cartItems");
+      cartItems.innerHTML = "";
+
+      // Lặp qua danh sách sản phẩm trong giỏ hàng và tạo các mục danh sách
+      for (let i = 0; i < cart.length; i++) {
+        let cartItem = document.createElement("li");
+        cartItem.innerText = cart[i].name + " - Số lượng: " + cart[i].quantity;
+        cartItems.appendChild(cartItem);
+      }
+    }
+  </script>
+</body>
+</html>
